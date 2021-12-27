@@ -29,7 +29,6 @@ namespace ClientReservasi_20190140041
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -45,14 +44,7 @@ namespace ClientReservasi_20190140041
             this.btHapus = new System.Windows.Forms.Button();
             this.btClear = new System.Windows.Forms.Button();
             this.dtPemesanan = new System.Windows.Forms.DataGridView();
-            this.pemesananBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.iDPemesananDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.jumlahPemesananDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lokasiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.namaCustomerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.noTelponDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtPemesanan)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pemesananBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -108,7 +100,7 @@ namespace ClientReservasi_20190140041
             // textBoxID
             // 
             this.textBoxID.Location = new System.Drawing.Point(180, 39);
-            this.textBoxID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxID.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxID.Name = "textBoxID";
             this.textBoxID.Size = new System.Drawing.Size(263, 22);
             this.textBoxID.TabIndex = 5;
@@ -116,7 +108,7 @@ namespace ClientReservasi_20190140041
             // textBoxNama
             // 
             this.textBoxNama.Location = new System.Drawing.Point(180, 92);
-            this.textBoxNama.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxNama.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxNama.Name = "textBoxNama";
             this.textBoxNama.Size = new System.Drawing.Size(263, 22);
             this.textBoxNama.TabIndex = 6;
@@ -124,7 +116,7 @@ namespace ClientReservasi_20190140041
             // textBoxNoTlf
             // 
             this.textBoxNoTlf.Location = new System.Drawing.Point(180, 150);
-            this.textBoxNoTlf.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxNoTlf.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxNoTlf.Name = "textBoxNoTlf";
             this.textBoxNoTlf.Size = new System.Drawing.Size(263, 22);
             this.textBoxNoTlf.TabIndex = 7;
@@ -132,7 +124,7 @@ namespace ClientReservasi_20190140041
             // textBoxJumlah
             // 
             this.textBoxJumlah.Location = new System.Drawing.Point(180, 204);
-            this.textBoxJumlah.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxJumlah.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxJumlah.Name = "textBoxJumlah";
             this.textBoxJumlah.Size = new System.Drawing.Size(263, 22);
             this.textBoxJumlah.TabIndex = 8;
@@ -140,7 +132,7 @@ namespace ClientReservasi_20190140041
             // textBoxIDLokasi
             // 
             this.textBoxIDLokasi.Location = new System.Drawing.Point(180, 255);
-            this.textBoxIDLokasi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxIDLokasi.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxIDLokasi.Name = "textBoxIDLokasi";
             this.textBoxIDLokasi.Size = new System.Drawing.Size(263, 22);
             this.textBoxIDLokasi.TabIndex = 9;
@@ -148,7 +140,7 @@ namespace ClientReservasi_20190140041
             // btSimpan
             // 
             this.btSimpan.Location = new System.Drawing.Point(557, 37);
-            this.btSimpan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btSimpan.Margin = new System.Windows.Forms.Padding(4);
             this.btSimpan.Name = "btSimpan";
             this.btSimpan.Size = new System.Drawing.Size(100, 28);
             this.btSimpan.TabIndex = 10;
@@ -159,7 +151,7 @@ namespace ClientReservasi_20190140041
             // btUpdate
             // 
             this.btUpdate.Location = new System.Drawing.Point(557, 89);
-            this.btUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btUpdate.Name = "btUpdate";
             this.btUpdate.Size = new System.Drawing.Size(100, 28);
             this.btUpdate.TabIndex = 11;
@@ -170,7 +162,7 @@ namespace ClientReservasi_20190140041
             // btHapus
             // 
             this.btHapus.Location = new System.Drawing.Point(557, 148);
-            this.btHapus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btHapus.Margin = new System.Windows.Forms.Padding(4);
             this.btHapus.Name = "btHapus";
             this.btHapus.Size = new System.Drawing.Size(100, 28);
             this.btHapus.TabIndex = 12;
@@ -181,7 +173,7 @@ namespace ClientReservasi_20190140041
             // btClear
             // 
             this.btClear.Location = new System.Drawing.Point(557, 198);
-            this.btClear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btClear.Margin = new System.Windows.Forms.Padding(4);
             this.btClear.Name = "btClear";
             this.btClear.Size = new System.Drawing.Size(100, 28);
             this.btClear.TabIndex = 13;
@@ -191,66 +183,14 @@ namespace ClientReservasi_20190140041
             // 
             // dtPemesanan
             // 
-            this.dtPemesanan.AutoGenerateColumns = false;
             this.dtPemesanan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtPemesanan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDPemesananDataGridViewTextBoxColumn,
-            this.jumlahPemesananDataGridViewTextBoxColumn,
-            this.lokasiDataGridViewTextBoxColumn,
-            this.namaCustomerDataGridViewTextBoxColumn,
-            this.noTelponDataGridViewTextBoxColumn});
-            this.dtPemesanan.DataSource = this.pemesananBindingSource;
             this.dtPemesanan.Location = new System.Drawing.Point(32, 305);
-            this.dtPemesanan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtPemesanan.Margin = new System.Windows.Forms.Padding(4);
             this.dtPemesanan.Name = "dtPemesanan";
             this.dtPemesanan.RowHeadersWidth = 51;
             this.dtPemesanan.Size = new System.Drawing.Size(625, 225);
             this.dtPemesanan.TabIndex = 14;
             this.dtPemesanan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtPemesanan_CellContentClick);
-            // 
-            // pemesananBindingSource
-            // 
-            this.pemesananBindingSource.DataSource = typeof(ClientReservasi_20190140041.ServiceReference1.Pemesanan);
-            // 
-            // iDPemesananDataGridViewTextBoxColumn
-            // 
-            this.iDPemesananDataGridViewTextBoxColumn.DataPropertyName = "IDPemesanan";
-            this.iDPemesananDataGridViewTextBoxColumn.HeaderText = "IDPemesanan";
-            this.iDPemesananDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.iDPemesananDataGridViewTextBoxColumn.Name = "iDPemesananDataGridViewTextBoxColumn";
-            this.iDPemesananDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // jumlahPemesananDataGridViewTextBoxColumn
-            // 
-            this.jumlahPemesananDataGridViewTextBoxColumn.DataPropertyName = "JumlahPemesanan";
-            this.jumlahPemesananDataGridViewTextBoxColumn.HeaderText = "JumlahPemesanan";
-            this.jumlahPemesananDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.jumlahPemesananDataGridViewTextBoxColumn.Name = "jumlahPemesananDataGridViewTextBoxColumn";
-            this.jumlahPemesananDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // lokasiDataGridViewTextBoxColumn
-            // 
-            this.lokasiDataGridViewTextBoxColumn.DataPropertyName = "Lokasi";
-            this.lokasiDataGridViewTextBoxColumn.HeaderText = "Lokasi";
-            this.lokasiDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.lokasiDataGridViewTextBoxColumn.Name = "lokasiDataGridViewTextBoxColumn";
-            this.lokasiDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // namaCustomerDataGridViewTextBoxColumn
-            // 
-            this.namaCustomerDataGridViewTextBoxColumn.DataPropertyName = "NamaCustomer";
-            this.namaCustomerDataGridViewTextBoxColumn.HeaderText = "NamaCustomer";
-            this.namaCustomerDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.namaCustomerDataGridViewTextBoxColumn.Name = "namaCustomerDataGridViewTextBoxColumn";
-            this.namaCustomerDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // noTelponDataGridViewTextBoxColumn
-            // 
-            this.noTelponDataGridViewTextBoxColumn.DataPropertyName = "NoTelpon";
-            this.noTelponDataGridViewTextBoxColumn.HeaderText = "NoTelpon";
-            this.noTelponDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.noTelponDataGridViewTextBoxColumn.Name = "noTelponDataGridViewTextBoxColumn";
-            this.noTelponDataGridViewTextBoxColumn.Width = 125;
             // 
             // Form1
             // 
@@ -272,12 +212,12 @@ namespace ClientReservasi_20190140041
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtPemesanan)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pemesananBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -300,11 +240,5 @@ namespace ClientReservasi_20190140041
         private System.Windows.Forms.Button btHapus;
         private System.Windows.Forms.Button btClear;
         private System.Windows.Forms.DataGridView dtPemesanan;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDPemesananDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn jumlahPemesananDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lokasiDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn namaCustomerDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn noTelponDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource pemesananBindingSource;
     }
 }

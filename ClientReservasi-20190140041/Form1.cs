@@ -18,10 +18,13 @@ namespace ClientReservasi_20190140041
         {
             InitializeComponent();
 
-
             TampilData();
             btUpdate.Enabled = false;
             btHapus.Enabled = false;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
         }
 
@@ -29,11 +32,11 @@ namespace ClientReservasi_20190140041
         {
             string IDPemesanan = textBoxID.Text;
             string NamaCustomer = textBoxNama.Text;
-            string NoTelepon = textBoxNoTlf.Text;
+            string NoTelpon = textBoxNoTlf.Text;
             int JumlahPemesanan = int.Parse(textBoxJumlah.Text);
-            string IDLokasi = textBoxIDLokasi.Text;
+            string IdLokasi = textBoxIDLokasi.Text;
 
-            var a = service.pemesanan(IDPemesanan, NamaCustomer, NoTelepon, JumlahPemesanan, IDLokasi);
+            var a = service.pemesanan(IDPemesanan, NamaCustomer, NoTelpon, JumlahPemesanan, IdLokasi);
             MessageBox.Show(a);
             TampilData();
             Clear();
@@ -43,9 +46,9 @@ namespace ClientReservasi_20190140041
         {
             string IDPemesanan = textBoxID.Text;
             string NamaCustomer = textBoxNama.Text;
-            string NoTelepon = textBoxNoTlf.Text;
+            string NoTelpon = textBoxNoTlf.Text;
 
-            var a = service.editPemesanan(IDPemesanan, NamaCustomer, NoTelepon);
+            var a = service.editpemesanan(IDPemesanan, NamaCustomer, NoTelpon);
             MessageBox.Show(a);
             TampilData();
             Clear();
@@ -55,19 +58,17 @@ namespace ClientReservasi_20190140041
         {
             string IDPemesanan = textBoxID.Text;
 
-            var a = service.deletePemesanan(IDPemesanan);
+            var a = service.deletepemesanan(IDPemesanan);
             MessageBox.Show(a);
             TampilData();
             Clear();
         }
-
 
         public void TampilData()
         {
             var List = service.Pemesanan1();
             dtPemesanan.DataSource = List;
         }
-
         public void Clear()
         {
             textBoxID.Clear();
@@ -76,45 +77,46 @@ namespace ClientReservasi_20190140041
             textBoxJumlah.Clear();
             textBoxIDLokasi.Clear();
 
-            textBoxJumlah.Enabled = true;
+            textBoxID.Enabled = true;
             textBoxIDLokasi.Enabled = true;
 
             btSimpan.Enabled = true;
-            btUpdate.Enabled = false;
-            btHapus.Enabled = false;
+            btUpdate.Enabled = true;
+            btHapus.Enabled = true;
 
             textBoxID.Enabled = true;
-        }
-
-        private void btClear_Click(object sender, EventArgs e)
-        {
-
-            Clear();
-
         }
 
         private void dtPemesanan_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+            
             textBoxID.Text = Convert.ToString(dtPemesanan.Rows[e.RowIndex].Cells[0].Value);
-            textBoxNama.Text = Convert.ToString(dtPemesanan.Rows[e.RowIndex].Cells[3].Value);
-            textBoxNoTlf.Text = Convert.ToString(dtPemesanan.Rows[e.RowIndex].Cells[4].Value);
-            textBoxJumlah.Text = Convert.ToString(dtPemesanan.Rows[e.RowIndex].Cells[1].Value);
-            textBoxIDLokasi.Text = Convert.ToString(dtPemesanan.Rows[e.RowIndex].Cells[2].Value);
+            textBoxNama.Text = Convert.ToString(dtPemesanan.Rows[e.RowIndex].Cells[1].Value);
+            textBoxNoTlf.Text = Convert.ToString(dtPemesanan.Rows[e.RowIndex].Cells[2].Value);
+            textBoxJumlah.Text = Convert.ToString(dtPemesanan.Rows[e.RowIndex].Cells[3].Value);
+            textBoxIDLokasi.Text = Convert.ToString(dtPemesanan.Rows[e.RowIndex].Cells[4].Value);
+            
 
             textBoxJumlah.Enabled = false;
-            textBoxIDLokasi.Enabled = false;
+            textBoxNama.Enabled = false;
 
             btUpdate.Enabled = true;
             btHapus.Enabled = true;
 
             btSimpan.Enabled = false;
             textBoxID.Enabled = false;
-
-
         }
 
 
+        private void btClear_Click(object sender, EventArgs e)
+        {
+            Clear();
+        }
 
+        private void dtPemesanan_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
